@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #ebfafa;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.psw{
+	text-align: center;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 30px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+<title>Login</title>
+</head>
+<body>
+<h3 style = "color:red; text-align:center"> If this is an emergency, please call 911 </h3>
+<img src="VA_logo.png" width = "270" height = "200" style = "display:block; margin-left: auto; margin-right: auto;">
+<form>
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+
+    <input type="text" id="username" placeholder = "Enter Username" required>
+     <label for="uname"><b>Password</b></label>
+    <input type="password" id = "password" placeholder="Enter Password" required>
+        
+    
+    
+    <span class="psw"><a href="#"> Forgot password?</a></span>
+  </div>
+  <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+</form>
+<button onclick = "LoginUser()">Login</button>
+
+<div id = "psw_text" class = "psw">
+</div>
+<script>
+	function LoginUser(){
+		var users = {"John" : "1234"}; 
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value;
+		console.log(username in users);
+		console.log(password == users[username]);
+		if(username in users && users[username] == password){
+			window.open("onboard2.html");
+		}
+		else{
+			var element = document.getElementById("psw_text").innerHTML = "<p style = 'color:red'>Please Enter a Valid Username and Password</p>"
+		}
+	}
+</script>
+</body>
+</html>

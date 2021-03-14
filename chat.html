@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    html { font-family: 'PT Sans', Arial, serif; }
+
+.discussion {
+  max-width: 900px;
+  display: flex;
+  flex-flow: column wrap;
+}
+textarea {
+   resize: none;
+}
+
+.users{
+  max-width: 300px;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.users > .list{
+  padding: 0.25em 0.75em;
+  margin: 0.0625em;
+  max-width: 100%;
+  height:50px;
+  font-size: 20px;
+  text-align:center;
+  background-color:#a7a5ad;
+  border: 3px solid black;
+}
+
+.discussion > .bubble {
+  border-radius: 1em;
+  padding: 0.25em 0.75em;
+  margin: 0.0625em;
+  max-width: 40%;
+}
+
+.discussion > .bubble.sender {
+  align-self: flex-start;
+  background-color: #7bb8b8;
+  color: #fff;
+}
+.discussion > .bubble.recipient {
+  align-self: flex-end;
+  background-color: #efefef;
+}
+
+.discussion > .bubble.sender.first { border-bottom-left-radius: 0.2em; }
+.discussion > .bubble.sender.last { border-top-left-radius: 0.2em; }
+.discussion > .bubble.sender.middle {
+  border-bottom-left-radius: 0.2em;
+  border-top-left-radius: 0.2em;
+}
+
+.discussion > .bubble.recipient.first { border-bottom-right-radius: 0.1em; }
+.discussion > .bubble.recipient.last { border-top-right-radius: 0.1em; }
+.discussion > .bubble.recipient.middle {
+  border-bottom-right-radius: 0.1em;
+  border-top-right-radius: 0.1em;
+}
+
+</style>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<title>Your Chat</title>
+</head>
+<body style="background-color: #ebfafa;">
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 b-r padding_bottom_70">
+  <h1 style="padding-left:20px  "> Chats </h1>
+<div style="overflow-y: scroll; height:600px; width: 300px">
+<section class = "users">
+  <div class = "list" style="background-color:#7bb8b8;"> Your Doctor </div>
+  <div class = "list"> Friend 1 </div>
+  <div class = "list"> Friend 2 </div>
+  <div class = "list"> Friend 3 </div>
+  <div class = "list"> Friend 4 </div>
+  <div class = "list"> Friend 5 </div>
+  <div class = "list"> Friend 6 </div>
+  <div class = "list"> Friend 7 </div>
+  <div class = "list"> Friend 8 </div>
+  <div class = "list"> Friend 9 </div>
+  <div class = "list"> Friend 10 </div>
+  <div class = "list"> Friend 11 </div>
+  <div class = "list"> Friend 12 </div>
+  <div class = "list"> Friend 13 </div>
+</section>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 b-r padding_bottom_70" >
+<h4 style="padding-top:20px"> Doctor, You </h4>
+<div style="overflow-y: scroll; height:550px;">
+<section class="discussion">
+  
+  <div class="bubble sender first">Hi there, I need some help with my mental health</div>
+  
+  <div class="bubble recipient first">Hi John! Sure, what can I help you with?</div>
+  
+  <div class="bubble sender first">Could I schedule a time to meet you?</div>
+  
+  <div class="bubble recipient first">Sure. I have time this afternoon for an appointment. What time suits you best?</div>
+
+  <div class="bubble sender first">Is 2pm fine?</div>
+  
+  <div class="bubble recipient first">Yes that works! I look forward to seeing you</div>
+
+  <div class="bubble sender first">Thank you</div>
+  
+  <div class="bubble recipient first">No worries, take care.</div>
+
+  <div class="bubble recipient first">Hi John, I hope you are feeling better after our appointement. I just wanted to check in on you today. How are things going?</div>
+  
+  <div class="bubble sender first">I am much better today. Thanks for asking. </div>
+
+  <div class="bubble recipient first">Thats good to hear. Any details you have for me?</div>
+  
+  <div class="bubble sender first">I would love to meet and discuss. What time works for you?</div>
+  
+  <div class="bubble recipient first">Lets meet today at 2pm?</div>
+  
+  
+</section>
+</div>
+<textarea id="w3review" name="w3review" rows="4" cols="72">
+  </textarea>
+  <button type="button" class="btn btn-primary">Send</button>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 b-r padding_bottom_70">
+<img src="VA_logo.png" width = "270" height = "450" style = "padding-top:200px">
+</div>
+</div>
+</body>
+</html>
